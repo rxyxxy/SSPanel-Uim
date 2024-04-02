@@ -16,5 +16,5 @@ cp config/.config.example.php config/.config.php
 cp config/appprofile.example.php config/appprofile.php
 
 service nginx start
-
+php /app/SSPanel-Uim/xcat ClientDownload
 while true; do php /app/SSPanel-Uim/xcat Cron 2>&1 && echo "SSPanel 的基本 cron 任务" && sleep 3000; done &
