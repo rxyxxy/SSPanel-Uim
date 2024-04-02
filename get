@@ -15,8 +15,8 @@ chown -R www-data:www-data *
 cp config/.config.example.php config/.config.php
 cp config/appprofile.example.php config/appprofile.php
 
-sed -i "s|\['appName'\]    = 'SSPanel-UIM';|['appName']    = '诈骗机场';|g" /app/SSPanel-Uim/config/.config.php
-sed -i "s|\['baseUrl'\]    = 'https://example.com';|['baseUrl']    = 'https://example.com';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['appName'\]    = 'SSPanel-UIM';|['appName']    = '$JC_NAME';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['baseUrl'\]    = 'https://example.com';|['baseUrl']    = '$JC_URL';|g" /app/SSPanel-Uim/config/.config.php
 
 sed -i "s|\['maxmind_license_key'\] = '';|['maxmind_license_key'] = '$IP_KEY';|g" /app/SSPanel-Uim/config/.config.php
 sed -i "s|\['muKey'\]       = 'ChangeMe';|['muKey']       = '$API_KEY';|g" /app/SSPanel-Uim/config/.config.php
