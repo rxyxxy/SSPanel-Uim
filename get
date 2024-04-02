@@ -14,3 +14,5 @@ chown -R www-data:www-data *
 
 cp config/.config.example.php config/.config.php
 cp config/appprofile.example.php config/appprofile.php
+
+service nginx restart
