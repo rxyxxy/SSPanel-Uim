@@ -7,3 +7,8 @@ wget https://getcomposer.org/installer -O composer.phar
 php composer.phar
 php composer.phar install --no-dev
 
+chmod -R 755 *
+chown -R www-data:www-data *
+
+cp config/.config.example.php config/.config.php
+cp config/appprofile.example.php config/appprofile.php
