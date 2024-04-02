@@ -4,6 +4,7 @@
 wget -O /etc/nginx/conf.d https://raw.githubusercontent.com/rxyxxy/SSPanel-Uim/rnm/SSPanel-Uim.conf
 
 git clone -b 2023.7 https://github.com/rxyxxy/SSPanel-Uim.git
+cd SSPanel-Uim
 wget https://getcomposer.org/installer -O composer.phar
 php composer.phar
 php composer.phar install --no-dev
