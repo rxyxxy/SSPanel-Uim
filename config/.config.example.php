@@ -6,8 +6,8 @@ $_ENV['pwdMethod'] = 'bcrypt';              // 密码加密 可选 bcrypt, argon
 $_ENV['salt'] = '';                    // bcrypt/argon2i/argon2id 会忽略此项
 
 $_ENV['debug'] = false;                 // debug模式开关，生产环境请保持为false
-$_ENV['appName'] = getenv('JC_NAME');         // 站点名称
-$_ENV['baseUrl'] = getenv('JC_URL'); // 站点地址，必须以https://开头，不要以/结尾
+$_ENV['appName'] = 'SSPanel-UIM';         // 站点名称
+$_ENV['baseUrl'] = 'https://example.com'; // 站点地址，必须以https://开头，不要以/结尾
 
 // WebAPI
 $_ENV['webAPI'] = true;               // 是否开启WebAPI功能
@@ -21,10 +21,10 @@ $_ENV['checkNodeIp'] = true;               // 是否webapi验证节点ip
 // db_socket 例：/var/run/mysqld/mysqld.sock（需使用绝对地址）
 $_ENV['db_host'] = '';
 $_ENV['db_socket'] = '';
-$_ENV['db_database'] = getenv('DATA_NAME');           // 数据库名
-$_ENV['db_username'] = getenv('DATA_USER');              // 数据库用户名
-$_ENV['db_password'] = getenv('DATA_PW');;           // 用户密码
-$_ENV['db_port'] = getenv('DATA_PORT');;              // 端口
+$_ENV['db_database'] = 'sspanel';           // 数据库名
+$_ENV['db_username'] = 'root';              // 数据库用户名
+$_ENV['db_password'] = 'sspanel';           // 用户密码
+$_ENV['db_port'] = '3306';              // 端口
 #读写分离相关配置
 $_ENV['enable_db_rw_split'] = false;         // 是否开启读写分离
 $_ENV['read_db_hosts'] = [''];          // 从库地址，可配置多个
@@ -102,7 +102,7 @@ $_ENV['jsdelivr_url'] = 'fastly.jsdelivr.net';
 $_ENV['sentry_dsn'] = '';
 
 // Maxmind GeoIP2 database
-$_ENV['maxmind_license_key'] = getenv('IP_KEY');;
+$_ENV['maxmind_license_key'] = '';
 $_ENV['geoip_locale'] = 'en';
 
 // Large language model powered ticket reply and more
