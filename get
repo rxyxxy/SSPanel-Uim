@@ -15,7 +15,7 @@ chown -R www-data:www-data *
 cp config/.config.example.php config/.config.php
 cp config/appprofile.example.php config/appprofile.php
 
-sed -i "s|\['db_host'\]      = '';|['db_host']      = '$DATA_NAME';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['db_host'\]      = '';|['db_host']      = '$DATA_HOST';|g" /app/SSPanel-Uim/config/.config.php
 sed -i "s|\['db_database'\]  = 'sspanel';|['db_database'] = '$DATA_NAME';|g" /app/SSPanel-Uim/config/.config.php
 sed -i "s|\['db_username'\]  = 'root';|['db_username'] = '$DATA_USER';|g" /app/SSPanel-Uim/config/.config.php
 sed -i "s|\['db_password'\]  = 'sspanel';|['db_password'] = '$DATA_PW';|g" /app/SSPanel-Uim/config/.config.php
