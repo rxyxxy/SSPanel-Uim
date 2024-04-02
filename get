@@ -15,10 +15,15 @@ chown -R www-data:www-data *
 cp config/.config.example.php config/.config.php
 cp config/appprofile.example.php config/appprofile.php
 
+sed -i "s|\['appName'\]    = 'SSPanel-UIM';|['appName']    = '诈骗机场';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['baseUrl'\]    = 'https://example.com';|['baseUrl']    = 'https://example.com';|g" /app/SSPanel-Uim/config/.config.php
+
+sed -i "s|\['maxmind_license_key'\] = '';|['maxmind_license_key'] = '$IP_KEY';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['muKey'\]       = 'ChangeMe';|['muKey']       = '$API_KEY';|g" /app/SSPanel-Uim/config/.config.php
 sed -i "s|\['db_host'\]      = '';|['db_host']      = '$DATA_HOST';|g" /app/SSPanel-Uim/config/.config.php
-sed -i "s|\['db_database'\]  = 'sspanel';|['db_database'] = '$DATA_NAME';|g" /app/SSPanel-Uim/config/.config.php
-sed -i "s|\['db_username'\]  = 'root';|['db_username'] = '$DATA_USER';|g" /app/SSPanel-Uim/config/.config.php
-sed -i "s|\['db_password'\]  = 'sspanel';|['db_password'] = '$DATA_PW';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['db_database'\]  = 'sspanel';|['db_database']  = '$DATA_NAME';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['db_username'\]  = 'root';|['db_username']  = '$DATA_USER';|g" /app/SSPanel-Uim/config/.config.php
+sed -i "s|\['db_password'\]  = 'sspanel';|['db_password']  = '$DATA_PW';|g" /app/SSPanel-Uim/config/.config.php
 sed -i "s|\['db_port'\]      = '3306';|['db_port']      = '$DATA_PORT';|g" /app/SSPanel-Uim/config/.config.php
 
 service nginx start
