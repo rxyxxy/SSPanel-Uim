@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+apt install vim -y
 wget -P /etc/nginx/conf.d https://raw.githubusercontent.com/rxyxxy/SSPanel-Uim/rnm/SSPanel-Uim.conf
 
 git clone -b 2023.7 https://github.com/rxyxxy/SSPanel-Uim.git
@@ -28,5 +28,5 @@ sed -i "s|\['db_port'\]      = '3306';|['db_port']      = '$DATA_PORT';|g" /app/
 
 service nginx start
 
-php php /app/SSPanel-Uim/xcat Update
+php /app/SSPanel-Uim/xcat Update
 while true; do php /app/SSPanel-Uim/xcat Cron 2>&1 && echo "SSPanel 的基本 cron 任务" && sleep 120; done &
